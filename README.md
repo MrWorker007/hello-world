@@ -1,4 +1,3 @@
-# hello-world
 #include <stdio.h>
 #include <string.h>
 
