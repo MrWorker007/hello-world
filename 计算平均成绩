@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    int program, English, philosophy, mathematics;
+    printf("Enter the grade of program, English, philosophy, mathematics:\n");
+    scanf("%d %d %d %d", &program, &English, &philosophy, &mathematics);
+
+    float average1, average2, sum;
+    average1 = (program + English + philosophy + mathematics)/4.0;
+    sum = 4 + 3 + 2 + 1;
+    average2 = (program * 4 + English * 2 + philosophy * 1 + mathematics * 3)/sum;
+
+    printf("average1 = %6.2f\n, average2 = %6.2f\n", average1, average2);
+
+    return 0;
+}
