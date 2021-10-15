@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    int angle;
+    float radian;
+    #define pai 3.14159
+
+    printf("Enter angle :");
+    scanf("%d", &angle);
+
+    radian = (angle * pai)/180;
+
+    printf("radian = %.2f", radian);
+
+    return 0;
+}
