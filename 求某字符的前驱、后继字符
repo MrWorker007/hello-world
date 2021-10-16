@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    char c, c1, c2;
+    printf("Enter character data:");
+    scanf("%c", &c);
+
+    c1 = c - 1;
+    c2 = c + 1;
+
+    printf("precursor:%c, current:%c, Successor:%c\n", c1, c, c2);
+
+    return 0;
+}
