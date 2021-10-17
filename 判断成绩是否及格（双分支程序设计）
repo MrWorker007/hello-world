@@ -1,0 +1,20 @@
+#include <stdio.h>
+#define Pass_Mark  60
+
+int main()
+{
+    int mark;
+    printf("Please input your mark:\n");
+    scanf("%d", &mark);
+
+    if(mark >= Pass_Mark)
+    {
+        printf("You are success!");
+    }
+    else
+    {
+        printf("You are failed!");
+    }
+
+    return 0;
+}
