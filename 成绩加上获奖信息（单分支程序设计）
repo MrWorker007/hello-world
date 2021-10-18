@@ -1,0 +1,21 @@
+#include <stdio.h>
+#define ADD_MARK 5
+
+int main()
+{
+    char win;
+    int mark;
+    printf("Please input your mark:\n");
+    scanf("%d", &mark);
+    getchar();
+    printf("Did you win the game(Y/N)?\n");
+    win = getchar();
+    if((win = 'Y')||(win = 'y'))
+        mark = mark + ADD_MARK;
+    if(mark > 100)
+        mark = 100;
+    
+    printf("Your final sorce is %d\n", mark);
+
+    return 0;
+}
