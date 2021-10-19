@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+
+#define pi 3.1415926
+
+int main()
+{
+    float r, S;
+
+    printf("please input r\n");
+    scanf("%f", &r);
+
+    S = pi * pow(r,2);
+
+    printf("S = %f\n", S);
+
+    return 0;
+}
