@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c, d;
+   scanf("%d", &a);
+   
+   b = (a/3600)%24;
+   c = (a/60)%60;
+   d = a%60;
+
+   printf("%0.2d:%0.2d:%0.2d", b, c, d);
+
+    return 0;
+}
