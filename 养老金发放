@@ -13,14 +13,15 @@ int main()
                         {
                             printf("70");
                         }
-                    else{
+                    else
+                        {
                             printf("50");
                         }
                 }
             else
-            {
-                printf("NULL");
-            }
+                {
+                    printf("NULL");
+                }
         }
 
     if(input == 2)
