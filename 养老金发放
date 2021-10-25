@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main()
+{
+    int input, age;
+    scanf("%d %d", &input, &age);
+
+    if(input == 1)
+        {
+            if(age > 65)
+                {
+                    if(age >70)
+                        {
+                            printf("70");
+                        }
+                    else{
+                            printf("50");
+                        }
+                }
+            else
+            {
+                printf("NULL");
+            }
+        }
+
+    if(input == 2)
+        {
+            if(age > 60)
+                {
+                    if(age > 65)
+                        {
+                            printf("70");
+                        }
+                    else
+                        {
+                            printf("45");
+                        }
+                }
+            else
+                {
+                    printf("NULL");
+                }
+        }
+    
+    return 0;
+}
