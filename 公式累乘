@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main()
+{   
+    double n, i, sum, P;
+    sum = 1.00;
+    scanf("%lf", &n);
+
+    for(i = 1; i <= n; i++)
+        {   
+            sum = sum * ((2 * i)*(2 * i)) / ((2 * i -1)*(2 * i + 1));
+        }
+
+    P = 2 * sum;
+    printf("%.10f", P);
+
+    return 0;
+}
