@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    double x, sum, a;
+    a = 1.00;
+    sum = 1.00;
+    scanf("%lf", &x);
+
+    for(i = 1; i < 100; i++)
+        {   
+            a = a * (x/i);
+            sum = a + sum;
+        }
+
+    printf("%.2lf", sum);
+
+    return 0;
+}
