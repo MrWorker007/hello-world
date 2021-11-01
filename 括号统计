@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{   
+    char input;
+    int a = 0, b = 0, c = 0;
+    
+    while((char)input != 64)
+        {
+            scanf("%c", &input);
+
+            if((char)input == 40) a++;
+            if((char)input == 41) a--;
+            if((char)input == 123) b++;
+            if((char)input == 125) b--;
+            if((char)input == 91) c++;
+            if((char)input == 93) c--;
+            if((char)input == 64) break;
+        }
+
+    if(b != 0)
+        printf("%c%c", 123, 125);
+    if(c != 0)
+        printf("%c%c", 91, 93);
+    if(a != 0)
+        printf("%c%c", 40, 41);
+    if(a == 0&&b == 0&&c == 0)
+        printf("NULL");
+    
+    return 0;
+}
