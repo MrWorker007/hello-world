@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{   
+    char x, i;
+    for(i = 'A'; i <= 'F'; i++)
+        {
+            for(x = i; x <= 'I'; x++)
+                printf("%2c", x);
+            for(x = 'A'; x < i; x++)
+                printf("%2c", x);
+            printf("\n");
+        }
+    
+    for(i = 'E'; i >= 'A'; i--)
+        {
+            for(x = i; x <= 'I'; x++)
+                printf("%2c", x);
+            for(x = 'A'; x < i; x++)
+                printf("%2c", x);
+            printf("\n");
+        } 
+
+    return 0;
+}
