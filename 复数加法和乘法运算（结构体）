@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+typedef struct complex
+{
+    float real_part, imaginary_part;
+}complex_type;
+
+complex_type complex_add(complex_type x, complex_type y)
+{
+    complex_type add;
+    add.real_part = x.real_part + y.real_part;
+    add.imaginary_part = x.imaginary_part + y.imaginary_part;
+    return add;
+}
+
+complex_type complex_mul(complex_type x, complex_type y)
+{
+    complex_type product;
+    product.real_part = x.real_part * y.real_part;
+    product.imaginary_part = x.imaginary_part * y.imaginary_part;
+    return product;
+}
+
+int main()
+{
+    complex_type x, y;
+    float real, imaginary;
+
+    scanf("%f %f", &real, &imaginary);
+    x.real_part = real;
+    x.imaginary_part = imaginary;
+    scanf("%f %f", &real, &imaginary);
+    y.real_part = real;
+    y.imaginary_part = imaginary;
+
+    complex_type add = complex_add(x, y);
+    complex_type mul = complex_mul(x, y);
+
+    printf("%f %f", add, mul);
+
+    return 0;
+}   
