@@ -1,0 +1,166 @@
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#include <stdbool.h>
+
+#define size 30
+
+
+
+char stack[size], ch;
+
+char ch;    //保存当前读入字符
+
+int top;    //栈顶指针
+
+
+
+void initial()  //栈初始化
+
+{
+
+    top = 0;
+
+}
+
+
+
+bool push(char x)   //压栈
+
+{
+
+    if(top > size - 1)  //栈满，操作不成功
+
+        return false;
+
+    else
+
+    {
+
+        stack[top] = x;
+
+        top = top + 1;
+
+        return true;
+
+    }
+
+}
+
+
+
+char pop()  //弹栈
+
+{
+
+    if(top == 0)
+
+        return '\0';    //空栈，操作不成功返回"空字符"
+
+    else
+
+    {
+
+        top = top - 1;
+
+        return stack[top];
+
+    }
+
+}
+
+
+
+void check(char x, char y)   //检查栈顶元素与读入的字符y进行比较
+
+{
+
+    if(x == '\0'||x == '@')     //弹出元素为"空字符"或"@"
+
+    {
+
+        printf("NO");
+
+        exit(0);
+
+    }
+
+    else
+
+    {
+
+        if(x != y)  //弹出元素是左括号
+
+        {
+
+            printf("NO");
+
+            exit(0);
+
+        }
+
+    }
+
+}
+
+
+
+int main()
+
+{     
+
+    char ch, out;
+
+    initial();
+
+    push('@');  //压入"@"
+
+
+
+    ch = getchar();
+
+    while(ch != '@')
+
+    {
+
+        switch(ch)
+
+        {
+
+            case '(':
+
+            case '[':
+
+            case '{': push(ch); break;   //左括号压栈
+
+            case ')': out = pop(); check(out, '('); break;   //处理")"
+
+            case ']': out = pop(); check(out, '['); break;   //处理"]"
+
+            case '}': out = pop(); check(out, '{'); break;   //处理"}"
+
+        }
+
+        ch = getchar();  //读下一个字符
+
+    }
+
+
+
+    out = pop();
+
+    if(out == '@')
+
+        printf("YES");
+
+    else
+
+        printf("NO");   //左括号多
+
+
+
+    return 0;
+
+}   
+
