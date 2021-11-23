@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{ 
+    int m, i, j, c;
+    scanf("%d", &m);
+    c = m * m;
+
+    int a[100];
+    int p = (1 + c - 2)*(c - 2)/2;
+    for(i = 0; i < c; i++)
+        scanf("%d", &a[i]);
+
+	int k = 0;
+    for(i = 0; i < c; i++)
+    	for(j = c - 1; j > i + 1; j--) 
+    {
+        if(a[i] != a[j])
+            k++;
+        else
+        	k--;
+    }
+    
+    if(k == p)
+    	printf("NO");
+    else
+    	printf("YES");
+    
+    return 0;
+}  
